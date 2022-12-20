@@ -1,4 +1,4 @@
-package com.example.mygreen.ui.home;
+package com.example.mygreen.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,7 +12,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.mygreen.databinding.FragmentHomeBinding;
 
-public class HomeFragment extends Fragment {
+/*public class HomeFragment extends Fragment {
 
     private FragmentHomeBinding binding;
 
@@ -24,7 +24,7 @@ public class HomeFragment extends Fragment {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textHome;
+        final TextView textView = binding.txtH;
         homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
@@ -34,4 +34,4 @@ public class HomeFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
-}
+}*/

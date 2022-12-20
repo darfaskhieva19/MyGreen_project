@@ -1,18 +1,8 @@
-package com.example.mygreen.ui.plants;
+package com.example.mygreen.fragments;
 
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
+//import com.example.mygreen.databinding.FragmentGalleryBinding;
 
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
-
-import com.example.mygreen.databinding.FragmentGalleryBinding;
-
-public class GalleryFragment extends Fragment {
+/*public class GalleryFragment extends Fragment {
 
     private FragmentGalleryBinding binding;
 
@@ -34,4 +24,4 @@ public class GalleryFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
-}
+}*/
