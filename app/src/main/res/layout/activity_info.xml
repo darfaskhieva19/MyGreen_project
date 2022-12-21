@@ -38,7 +38,6 @@
                 android:id="@+id/imgPlant"
                 android:layout_width="155dp"
                 android:layout_height="155dp"
-                android:onClick="getImage"
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="10dp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -137,10 +136,11 @@
                 android:id="@+id/Info"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Описание"
                 android:layout_marginTop="35dp"
+                android:text="Описание"
+                android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/tv_Descr"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imgPlant"
                 tools:ignore="MissingConstraints" />
 
@@ -161,38 +161,24 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:text="Ссылка"
+                android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_Descr" />
 
-            <TextView
-                android:id="@+id/tv_Links"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:autoLink="web"
-                android:gravity="center"
-                android:linksClickable="true"
-                android:width="350dp"
-                android:textSize="16dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/Link" />
-
-
             <android.widget.Button
                 android:id="@+id/btBack"
                 android:layout_width="140dp"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="30dp"
                 android:onClick="GoBack"
                 android:text="Назад"
-                android:textColor="@color/black"
+                android:background="@drawable/color_background"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_Links" />
+                app:layout_constraintTop_toBottomOf="@+id/Link" />
 
 
 

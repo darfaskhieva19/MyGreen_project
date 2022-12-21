@@ -26,7 +26,6 @@ public class InfoActivity extends AppCompatActivity {
     TextView Watering;
     TextView Lighting;
     TextView Spraying;
-    TextView Link;
     ImageView Image;
     View v;
     Bundle arg;
@@ -49,7 +48,6 @@ public class InfoActivity extends AppCompatActivity {
         Lighting = findViewById(R.id.textLight);
         Spraying = findViewById(R.id.textSpray);
         Image = findViewById(R.id.imgPlant);
-        Link = findViewById(R.id.tv_Links);
 
         Title.setText(plant.getTitle());
         Description.setText(plant.getDescription());
@@ -57,7 +55,6 @@ public class InfoActivity extends AppCompatActivity {
         Watering.setText(plant.getWatering());
         Lighting.setText(plant.getLighting());
         Spraying.setText(plant.getSpraying());
-        Link.setText(plant.getLink());
 
         DecodeImage decodeImage = new DecodeImage(InfoActivity.this);
         Image.setImageBitmap(decodeImage.getUserImage(plant.getPhoto()));

@@ -19,6 +19,6 @@ public class DecodeImage {
             return BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
         }
         else
-            return BitmapFactory.decodeResource(DecodeImage.this.mContext.getResources(), R.drawable.picture);
+            return BitmapFactory.decodeResource(DecodeImage.this.mContext.getResources(), R.drawable.naturalfood);
     }
 }
