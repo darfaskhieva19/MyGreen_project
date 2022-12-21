@@ -18,7 +18,7 @@ public class ScreenSplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent mainIntent = new Intent(ScreenSplashActivity.this,MainActivity.class);
+                Intent mainIntent = new Intent(ScreenSplashActivity.this,InfoActivity.class);
                 ScreenSplashActivity.this.startActivity(mainIntent);
                 ScreenSplashActivity.this.finish();
             }

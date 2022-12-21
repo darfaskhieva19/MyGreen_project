@@ -112,7 +112,7 @@ public class FilterActivity extends AppCompatActivity {
                     Toast.makeText(FilterActivity.this, "Пусто", Toast.LENGTH_SHORT).show();
                 } else {
                     List<Lighting> list = new ArrayList<>();
-                   // list.add("Все освещение");
+                   //list.add("Все освещение");
                     for (int i = 0; i < response.body().size(); i++) {
                         //list.add(response.body().get(i).getLighting());
                     }

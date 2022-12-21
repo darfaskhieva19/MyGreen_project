@@ -20,7 +20,13 @@ import java.io.InputStream;
 
 public class InfoActivity extends AppCompatActivity {
 
-    TextView Title, Description, Link, Watering, Spraying, Lighting, Care;
+    TextView Title;
+    TextView Description;
+    TextView Care;
+    TextView Watering;
+    TextView Lighting;
+    TextView Spraying;
+    TextView Link;
     ImageView Image;
     View v;
     Bundle arg;
@@ -38,27 +44,23 @@ public class InfoActivity extends AppCompatActivity {
 
         Title = findViewById(R.id.Header);
         Description = findViewById(R.id.tv_Descr);
-        Link = findViewById(R.id.tv_Links);
+        Care = findViewById(R.id.textCare);
         Watering = findViewById(R.id.textWater);
         Lighting = findViewById(R.id.textLight);
         Spraying = findViewById(R.id.textSpray);
-        Care = findViewById(R.id.textCare);
         Image = findViewById(R.id.imgPlant);
+        Link = findViewById(R.id.tv_Links);
 
         Title.setText(plant.getTitle());
         Description.setText(plant.getDescription());
-        Link.setText(plant.getLink());
-        Watering.setText(plant.getWatering());
-        Spraying.setText(plant.getSpraying());
-        Lighting.setText(plant.getLighting());
         Care.setText(plant.getCare());
+        Watering.setText(plant.getWatering());
+        Lighting.setText(plant.getLighting());
+        Spraying.setText(plant.getSpraying());
+        Link.setText(plant.getLink());
 
         DecodeImage decodeImage = new DecodeImage(InfoActivity.this);
-        Bitmap userImage = decodeImage.getUserImage(plant.getPhoto());
-        Image.setImageBitmap(userImage);
-        if(!plant.getPhoto().equals("null")) {
-            bitmap = userImage;
-        }
+        Image.setImageBitmap(decodeImage.getUserImage(plant.getPhoto()));
     }
 
     public void onClickBack(View v)

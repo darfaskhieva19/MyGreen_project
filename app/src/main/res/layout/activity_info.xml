@@ -23,36 +23,126 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-
             <TextView
                 android:id="@+id/Header"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:text="NamePlants"
+                android:text="TitlePlant"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints" />
+                app:layout_constraintStart_toStartOf="parent" />
 
             <ImageView
                 android:id="@+id/imgPlant"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                app:srcCompat="@drawable/naturalfood"
-                tools:ignore="MissingConstraints"
+                android:layout_width="155dp"
+                android:layout_height="155dp"
                 android:onClick="getImage"
-                tools:layout_editor_absoluteX="35dp"
-                tools:layout_editor_absoluteY="83dp" />
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Header"/>
+
+            <TextView
+                android:id="@+id/Care"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Уход:"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintStart_toEndOf="@+id/imgPlant"
+                app:layout_constraintTop_toBottomOf="@+id/Header" />
+
+            <TextView
+                android:id="@+id/Water"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Полив:"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintStart_toEndOf="@+id/imgPlant"
+                app:layout_constraintTop_toBottomOf="@+id/Care" />
+
+            <TextView
+                android:id="@+id/Light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Освещение:"
+                android:textSize="16sp"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintStart_toEndOf="@+id/imgPlant"
+                app:layout_constraintTop_toBottomOf="@+id/Water" />
+
+            <TextView
+                android:id="@+id/Spray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Опрыскивание:"
+                android:textSize="16sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toEndOf="@+id/imgPlant"
+                app:layout_constraintTop_toBottomOf="@+id/Light"
+                />
+
+            <TextView
+                android:id="@+id/textCare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/Care"
+                app:layout_constraintTop_toBottomOf="@+id/Header"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/textWater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/Water"
+                app:layout_constraintTop_toBottomOf="@+id/textCare"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/textLight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/Light"
+                app:layout_constraintTop_toBottomOf="@+id/textWater"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/textSpray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/Spray"
+                app:layout_constraintTop_toBottomOf="@+id/textLight"
+                tools:ignore="MissingConstraints" />
 
             <TextView
                 android:id="@+id/Info"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Описание"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="45dp"
-                tools:layout_editor_absoluteY="276dp" />
+                android:layout_marginTop="35dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_Descr"
+                app:layout_constraintTop_toBottomOf="@+id/imgPlant"
+                tools:ignore="MissingConstraints" />
 
             <TextView
                 android:id="@+id/tv_Descr"
@@ -67,19 +157,19 @@
 
             <TextView
                 android:id="@+id/Link"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_marginTop="15dp"
-                android:autoLink="web"
-
-                android:text="Ссылка на википедию"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Ссылка"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_Descr" />
 
             <TextView
                 android:id="@+id/tv_Links"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="27dp"
+                android:layout_marginTop="20dp"
                 android:autoLink="web"
                 android:gravity="center"
                 android:linksClickable="true"
@@ -89,75 +179,23 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/Link" />
 
-            <TextView
-                android:id="@+id/textCare"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imgPlant"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteY="88dp" />
-
-            <TextView
-                android:id="@+id/textWater"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imgPlant"
-                app:layout_constraintTop_toBottomOf="@+id/textCare"
-                tools:ignore="MissingConstraints" />
-
-            <TextView
-                android:id="@+id/textSpray"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imgPlant"
-                app:layout_constraintTop_toBottomOf="@+id/textWater"
-                tools:ignore="MissingConstraints" />
-
-            <TextView
-                android:id="@+id/textLight"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imgPlant"
-                app:layout_constraintTop_toBottomOf="@+id/textSpray"
-                tools:ignore="MissingConstraints" />
 
             <android.widget.Button
-                android:id="@+id/btnReminder"
-                android:layout_width="210dp"
-                android:layout_height="55dp"
-                android:layout_marginTop="20dp"
-                android:text="Добавить напоминание"
+                android:id="@+id/btBack"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:onClick="GoBack"
+                android:text="Назад"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_Links"
-                tools:ignore="MissingConstraints" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_Links" />
 
-            <android.widget.Button
-                android:id="@+id/btnDelete"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Удалить"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="279dp"
-                tools:layout_editor_absoluteY="635dp" />
 
-            <android.widget.Button
-                android:id="@+id/btnBack"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Назад"
-                tools:layout_editor_absoluteX="56dp"
-                tools:layout_editor_absoluteY="632dp"
-                android:onClick="onClickBack"
-                tools:ignore="MissingConstraints" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

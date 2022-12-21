@@ -3,6 +3,9 @@ package com.example.mygreen;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.util.Base64;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -19,6 +22,17 @@ public class Adapter extends BaseAdapter {
     public Adapter(Context mContext, List<Plant> listPlants) {
         this.mContext = mContext;
         this.listPlants = listPlants;
+    }
+
+    private Bitmap getUserImage(String encodedImg)
+    {
+        if(encodedImg!=null&& !encodedImg.equals("null")) {
+            byte[] bytes = Base64.decode(encodedImg, Base64.DEFAULT);
+            return BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+        }
+        else {
+            return null;
+        }
     }
 
     @Override
@@ -38,13 +52,13 @@ public class Adapter extends BaseAdapter {
 
 
     @Override
-    public View getView(int i, View view, ViewGroup viewGroup)
+    public View getView(int position, View view, ViewGroup viewGroup)
     {
         @SuppressLint("ViewHolder") View v = View.inflate(mContext,R.layout.item_libraryplants,null);
         TextView Title = v.findViewById(R.id.Title);
         TextView Description = v.findViewById(R.id.Description);
-        ImageView Photo = v.findViewById(R.id.Img);
-        Plant plant = listPlants.get(i);
+        ImageView Photo = v.findViewById(R.id.Photo);
+        Plant plant = listPlants.get(position);
         Title.setText(plant.getTitle());
         Description.setText(plant.getDescription());
         DecodeImage DI = new DecodeImage(mContext);
@@ -52,7 +66,7 @@ public class Adapter extends BaseAdapter {
         v.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(mContext, MainActivity.class);
+                Intent intent = new Intent(mContext, InfoActivity.class);
                 intent.putExtra(Plant.class.getSimpleName(), plant);
                 mContext.startActivity(intent);
             }

@@ -24,7 +24,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     Adapter pAdapter;
-    private final List<Plant> listPlants = new ArrayList<>();
+    private  List<Plant> listPlants = new ArrayList<>();
     EditText filter;
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        filter = findViewById(R.id.filter);
 
         ListView ivProducts  = findViewById(R.id.listPlant);
         pAdapter = new Adapter(MainActivity.this, listPlants);
@@ -41,15 +42,16 @@ public class MainActivity extends AppCompatActivity {
         new Get().execute();
     }
 
+    public void onClear(View v)
+    {
+        filter.setText("");
+    }
+
     public void Filter(View view) {
         Intent intent = new Intent(this, FilterActivity.class);
         startActivity(intent);
     }
 
-    public void onMyPlants(View view) {
-        Intent intent = new Intent(this, MyPlantsActivity.class);
-        startActivity(intent);
-    }
 
     class Get extends AsyncTask<Void, Void, String> {
         @Override
@@ -77,7 +79,6 @@ public class MainActivity extends AppCompatActivity {
             super.onPostExecute(s);
             try
             {
-                listPlants.clear();
                 JSONArray tempArray = new JSONArray(s);
                 for (int i = 0; i < tempArray.length(); i++)
                 {
