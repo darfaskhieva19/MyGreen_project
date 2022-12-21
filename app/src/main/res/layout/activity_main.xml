@@ -23,12 +23,12 @@
 
     <EditText
         android:id="@+id/filter"
-        android:layout_width="390dp"
+        android:layout_width="370dp"
         android:layout_height="45dp"
-        android:hint="@string/Search"
         android:layout_marginTop="10dp"
-        android:paddingLeft="10dp"
         android:background="@drawable/border_txt"
+        android:hint="@string/Search"
+        android:paddingLeft="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageFilter" />

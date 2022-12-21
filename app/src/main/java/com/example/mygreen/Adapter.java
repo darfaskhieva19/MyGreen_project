@@ -19,6 +19,7 @@ public class Adapter extends BaseAdapter {
     protected Context mContext;
     List<Plant> listPlants;
 
+
     public Adapter(Context mContext, List<Plant> listPlants) {
         this.mContext = mContext;
         this.listPlants = listPlants;
@@ -39,7 +40,6 @@ public class Adapter extends BaseAdapter {
         return listPlants.get(position).getID();
     }
 
-
     @Override
     public View getView(int position, View view, ViewGroup viewGroup)
     {
@@ -50,7 +50,6 @@ public class Adapter extends BaseAdapter {
         Plant plant = listPlants.get(position);
         Title.setText(plant.getTitle());
         Description.setText(plant.getDescription());
-
         DecodeImage DI = new DecodeImage(mContext);
         Photo.setImageBitmap(DI.getUserImage(plant.getPhoto()));
 

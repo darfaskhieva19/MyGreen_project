@@ -44,7 +44,6 @@ public class InfoActivity extends AppCompatActivity {
         Title = findViewById(R.id.Header);
         Description = findViewById(R.id.tv_Descr);
         Care = findViewById(R.id.textCare);
-        Watering = findViewById(R.id.textWater);
         Lighting = findViewById(R.id.textLight);
         Spraying = findViewById(R.id.textSpray);
         Image = findViewById(R.id.imgPlant);
@@ -52,7 +51,6 @@ public class InfoActivity extends AppCompatActivity {
         Title.setText(plant.getTitle());
         Description.setText(plant.getDescription());
         Care.setText(plant.getCare());
-        Watering.setText(plant.getWatering());
         Lighting.setText(plant.getLighting());
         Spraying.setText(plant.getSpraying());
 
@@ -60,7 +58,7 @@ public class InfoActivity extends AppCompatActivity {
         Image.setImageBitmap(decodeImage.getUserImage(plant.getPhoto()));
     }
 
-    public void onClickBack(View v)
+    public void GoBack(View v)
     {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);

@@ -40,13 +40,6 @@ public class MainActivity extends AppCompatActivity {
         pAdapter = new Adapter(MainActivity.this, listPlants);
         ivProducts.setAdapter(pAdapter);
         new Get().execute();
-
-        /*filter.setOnFocusChangeListener((v, hasFocus) -> {
-            if (hasFocus)
-                filter.setHint("");
-            else
-                filter.setHint(R.string.filter);
-        });*/
     }
 
     public void onClear(View v)

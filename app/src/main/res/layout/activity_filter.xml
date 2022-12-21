@@ -41,6 +41,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck,TouchTargetSizeCheck"
         tools:layout_editor_absoluteY="94dp" />
 
     <TextView
@@ -59,13 +60,14 @@
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginStart="30dp"
-        android:background="@drawable/border_txt"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
+        android:background="@drawable/border_txt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/WateringPlants" />
+        app:layout_constraintTop_toBottomOf="@+id/WateringPlants"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/SprayingPlants"
@@ -83,13 +85,14 @@
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginStart="30dp"
-        android:background="@drawable/border_txt"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
+        android:background="@drawable/border_txt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SprayingPlants" />
+        app:layout_constraintTop_toBottomOf="@+id/SprayingPlants"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/LightingPlants"
@@ -113,7 +116,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LightingPlants" />
+        app:layout_constraintTop_toBottomOf="@+id/LightingPlants"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/CarePlants"
@@ -137,18 +141,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CarePlants" />
+        app:layout_constraintTop_toBottomOf="@+id/CarePlants"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <android.widget.Button
         android:id="@+id/btnSearch"
         android:layout_width="130dp"
         android:layout_height="40dp"
-        android:text="Поиск"
         android:background="@drawable/color_background"
+        android:text="Поиск"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnClear"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spCare"
-        app:layout_constraintEnd_toStartOf="@+id/btnClear"/>
+        tools:ignore="TouchTargetSizeCheck" />
 
     <android.widget.Button
         android:id="@+id/btnClear"
@@ -159,18 +165,20 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnSearch"
-        app:layout_constraintTop_toBottomOf="@+id/spCare" />
+        app:layout_constraintTop_toBottomOf="@+id/spCare"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <android.widget.Button
         android:id="@+id/btnBack"
         android:layout_width="130dp"
         android:layout_height="40dp"
         android:background="@drawable/color_background"
-        android:text="Вернуться"
         android:onClick="onBack"
+        android:text="Вернуться"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnClear" />
+        app:layout_constraintTop_toBottomOf="@+id/btnClear"
+        tools:ignore="TouchTargetSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

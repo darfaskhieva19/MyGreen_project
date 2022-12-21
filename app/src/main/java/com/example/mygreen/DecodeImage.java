@@ -5,7 +5,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Base64;
 
-public class DecodeImage {
+public class DecodeImage{
     Context mContext;
 
     public DecodeImage(Context mContext) {
@@ -18,7 +18,8 @@ public class DecodeImage {
             byte[] bytes = Base64.decode(encodedImg, Base64.DEFAULT);
             return BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
         }
-        else
-            return BitmapFactory.decodeResource(DecodeImage.this.mContext.getResources(), R.drawable.picture);
+        else {
+            return BitmapFactory.decodeResource(DecodeImage.this.mContext.getResources(), R.drawable.naturalfood);
+        }
     }
 }
