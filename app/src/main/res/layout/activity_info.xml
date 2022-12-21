@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InfoActivity">
+    tools:context=".InfoActivity"
+    android:background="@color/button">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -31,15 +32,17 @@
                 android:textAlignment="center"
                 android:textSize="24sp"
                 android:textStyle="bold"
+                android:textColor="@color/txtHeader"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints" />
 
             <ImageView
                 android:id="@+id/imgPlant"
                 android:layout_width="155dp"
                 android:layout_height="155dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="15dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/Header"/>
 
@@ -49,7 +52,7 @@
                 android:layout_height="wrap_content"
                 android:text="Уход:"
                 android:textSize="16sp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="30dp"
                 android:layout_marginLeft="10dp"
                 app:layout_constraintStart_toEndOf="@+id/imgPlant"
                 app:layout_constraintTop_toBottomOf="@+id/Header" />
@@ -92,7 +95,7 @@
                 android:id="@+id/textCare"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="22dp"
+                android:layout_marginTop="30dp"
                 android:text="TextView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/Care"
@@ -136,7 +139,7 @@
                 android:id="@+id/Info"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="35dp"
+                android:layout_marginTop="45dp"
                 android:text="Описание"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -170,8 +173,8 @@
                 android:id="@+id/btBack"
                 android:layout_width="140dp"
                 android:layout_height="40dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="30dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="35dp"
                 android:onClick="GoBack"
                 android:text="Назад"
                 android:background="@drawable/color_background"

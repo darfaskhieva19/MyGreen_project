@@ -24,17 +24,6 @@ public class Adapter extends BaseAdapter {
         this.listPlants = listPlants;
     }
 
-    private Bitmap getUserImage(String encodedImg)
-    {
-        if(encodedImg!=null&& !encodedImg.equals("null")) {
-            byte[] bytes = Base64.decode(encodedImg, Base64.DEFAULT);
-            return BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
-        }
-        else {
-            return null;
-        }
-    }
-
     @Override
     public int getCount() {
         return listPlants.size();
@@ -61,8 +50,10 @@ public class Adapter extends BaseAdapter {
         Plant plant = listPlants.get(position);
         Title.setText(plant.getTitle());
         Description.setText(plant.getDescription());
+
         DecodeImage DI = new DecodeImage(mContext);
         Photo.setImageBitmap(DI.getUserImage(plant.getPhoto()));
+
         v.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

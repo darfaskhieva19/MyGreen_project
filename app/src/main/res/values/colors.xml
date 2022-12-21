@@ -7,8 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="btn">#30E8BF</color>
-    <color name="btn2">#92F4E2</color>
-    <color name="backfon">#F5F5F5</color>
-    <color name="txtHeader">#34e89e</color>
+    <color name="btn">#D7FF65</color>
+    <color name="btn2">#B2E12B</color>
+    <color name="backfon">#D6EE91</color>
+    <color name="txtHeader">#606060</color>
+    <color name="button">#F6FCE6</color>
+    <color name="text">#D6EE91</color>
+
 </resources>

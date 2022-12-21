@@ -13,12 +13,12 @@ public class ScreenSplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_screensaver);
 
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent mainIntent = new Intent(ScreenSplashActivity.this,InfoActivity.class);
+                Intent mainIntent = new Intent(ScreenSplashActivity.this,MainActivity.class);
                 ScreenSplashActivity.this.startActivity(mainIntent);
                 ScreenSplashActivity.this.finish();
             }

@@ -2,6 +2,7 @@ package com.example.mygreen;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -157,5 +158,10 @@ public class FilterActivity extends AppCompatActivity {
                 Log.e(t.toString(), t.getMessage());
             }
         });
+    }
+
+    public void onBack(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }

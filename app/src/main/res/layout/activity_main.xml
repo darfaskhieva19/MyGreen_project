@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@color/backfon">
+    android:background="@color/button">
 
     <TextView
         android:id="@+id/txtH"
@@ -14,6 +14,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:text="@string/library"
+        android:textColor="@color/txtHeader"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/imageFilter"
@@ -23,9 +24,11 @@
     <EditText
         android:id="@+id/filter"
         android:layout_width="390dp"
-        android:layout_height="40dp"
+        android:layout_height="45dp"
         android:hint="@string/Search"
         android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:background="@drawable/border_txt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageFilter" />

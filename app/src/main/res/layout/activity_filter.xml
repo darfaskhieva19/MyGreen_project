@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FilterActivity"
-    android:background="@color/backfon">
+    android:background="@color/button">
 
     <TextView
         android:id="@+id/txtH"
@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:text="Фильтр"
+        android:textColor="@color/txtHeader"
         android:layout_marginTop="20dp"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -35,12 +36,12 @@
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
+        android:background="@drawable/border_txt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sort" />
+        tools:layout_editor_absoluteY="94dp" />
 
     <TextView
         android:id="@+id/WateringPlants"
@@ -58,6 +59,7 @@
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginStart="30dp"
+        android:background="@drawable/border_txt"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -81,6 +83,7 @@
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginStart="30dp"
+        android:background="@drawable/border_txt"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -106,6 +109,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
+        android:background="@drawable/border_txt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -129,6 +133,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
+        android:background="@drawable/border_txt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -155,5 +160,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnSearch"
         app:layout_constraintTop_toBottomOf="@+id/spCare" />
+
+    <android.widget.Button
+        android:id="@+id/btnBack"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:background="@drawable/color_background"
+        android:text="Вернуться"
+        android:onClick="onBack"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnClear" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
