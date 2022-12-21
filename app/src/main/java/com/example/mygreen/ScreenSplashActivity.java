@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-public class ScreensaverActivity extends AppCompatActivity {
+public class ScreenSplashActivity extends AppCompatActivity {
 
     private final int SPLASH_DISPLAY_LENGHT = 3000;
 
@@ -18,9 +18,9 @@ public class ScreensaverActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent mainIntent = new Intent(ScreensaverActivity.this,MainActivity.class);
-                ScreensaverActivity.this.startActivity(mainIntent);
-                ScreensaverActivity.this.finish();
+                Intent mainIntent = new Intent(ScreenSplashActivity.this,MainActivity.class);
+                ScreenSplashActivity.this.startActivity(mainIntent);
+                ScreenSplashActivity.this.finish();
             }
         }, SPLASH_DISPLAY_LENGHT);
     }

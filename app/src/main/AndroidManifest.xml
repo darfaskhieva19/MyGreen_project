@@ -16,14 +16,28 @@
         android:theme="@style/Theme.MyGreen"
         tools:targetApi="31">
         <activity
-            android:name=".FragmentInfo"
+            android:name=".MyPlantsActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ScreensaverActivity"
+            android:name=".FilterActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".InfoActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ScreenSplashActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
