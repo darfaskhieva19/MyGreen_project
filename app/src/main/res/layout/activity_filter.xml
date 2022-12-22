@@ -21,30 +21,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/sort"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:text="Сортировка"
-        android:textSize="16sp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtH" />
-
-    <Spinner
-        android:id="@+id/spSort"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:background="@drawable/border_txt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints,SpeakableTextPresentCheck,TouchTargetSizeCheck"
-        tools:layout_editor_absoluteY="94dp" />
-
-    <TextView
         android:id="@+id/WateringPlants"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -53,7 +29,7 @@
         android:textSize="16sp"
         android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spSort" />
+        app:layout_constraintTop_toBottomOf="@+id/txtH" />
 
     <Spinner
         android:id="@+id/spWatering"

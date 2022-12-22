@@ -21,8 +21,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Spinner
+        android:id="@+id/spSort"
+        android:layout_width="370dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EtFilter" />
+
     <EditText
-        android:id="@+id/filter"
+        android:id="@+id/EtFilter"
         android:layout_width="370dp"
         android:layout_height="45dp"
         android:layout_marginTop="10dp"
@@ -38,10 +48,11 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnClear"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/filter" />
+        app:layout_constraintTop_toBottomOf="@+id/spSort" />
 
     <ImageView
         android:id="@+id/imageFilter"
@@ -53,21 +64,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <android.widget.Button
-        android:id="@+id/button"
-        android:layout_width="150dp"
-        android:layout_height="40dp"
-        android:layout_marginBottom="30dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/color_background"
-        android:onClick="onSearch"
-        android:text="Поиск"
-        android:layout_marginLeft="30dp"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listPlant" />
-
-    <android.widget.Button
         android:id="@+id/btnClear"
         android:layout_width="150dp"
         android:layout_height="40dp"
@@ -75,9 +71,10 @@
         android:onClick="onClear"
         android:text="Очистить"
         android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
         android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/listPlant" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

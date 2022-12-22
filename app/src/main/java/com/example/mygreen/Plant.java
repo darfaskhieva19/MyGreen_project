@@ -6,7 +6,7 @@ import android.os.Parcelable;
 public class Plant implements Parcelable {
 
     private Integer Id;
-    private String Title;
+    String Title;
     private String Description;
     private String Photo;
     private String Care;
