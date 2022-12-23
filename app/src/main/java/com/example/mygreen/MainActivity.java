@@ -122,6 +122,7 @@ public class MainActivity extends AppCompatActivity {
     public void onClear(View v)
     {
         filter.setText("");
+        spinner.setSelection(0);
     }
 
     public void Filter(View view) {
